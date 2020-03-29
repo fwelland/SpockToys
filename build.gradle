@@ -1,0 +1,24 @@
+plugins {
+    id "java"
+    id "groovy"
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    
+    testImplementation 'cglib:cglib-nodep:3.3.0'    
+    testImplementation 'org.objenesis:objenesis:3.1'       
+    testImplementation 'org.spockframework:spock-core:2.0-M2-groovy-3.0'
+}
+
+wrapper{
+    gradleVersion = '6.2.2'
+}
+
+test{
+    useJUnitPlatform()
+    //systemProperty "PRINTER_ON", "FALSE"
+}
